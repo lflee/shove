@@ -15,10 +15,14 @@
     </section>
 
 
-    <script src="videoIDs.json">
-        var JSONArray, x;
-        x = JSONArray.id[0];
-        document.getElementById("JSONArray").innerHTML = x;
+    <script>
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+                document.getElementById("JSONArray").innerHTML = myObj.id[0];
+            }
+        };
     </script>
 </body>
 </html>
