@@ -9,6 +9,16 @@
 <body>
     <section>
         <p>質質質質質</p>
+        <p>Display the id array from JSON
+        </p>
+        <p id="JSONArray"></p>
     </section>
+
+
+    <script src="videoIDs.json">
+        var JSONArray, x;
+        x = JSONArray.id[0];
+        document.getElementById("JSONArray").innerHTML = x;
+    </script>
 </body>
 </html>
